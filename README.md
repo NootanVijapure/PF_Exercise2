@@ -1,38 +1,33 @@
-# DDL exercise
-Creating Tables:
-Create a table named Movies with the following columns:
-movie_id (integer)
-title (varchar, maximum length 100)
-director (varchar, maximum length 50)
-release_year (integer)
-genre (varchar, maximum length 50)
+Objective: To comprehend the significance of primary keys and foreign keys in database management, emphasizing their role
 
-Altering Tables:
-Alter the Movies table to add a new column named rating of type decimal(3, 1).
+Scenario:
+Imagine you are designing a database system for a psychology clinic that manages information about patients, psychologists, and their appointments. You'll be working with tables related to patients and psychologists.
 
-Dropping Tables:
-Create a new table named Students with columns:
+Requirements:
 
-student_id (integer)
-student_name (varchar, maximum length 50)
-age (integer)
-grade (varchar, maximum length 2)
-Then, drop the Students table.
+Database Management System (DBMS) software (e.g., MySQL, PostgreSQL, SQLite)
+Basic SQL knowledge
+Tasks:
 
-Truncating Tables:
-Create a table named Events with columns:
+Create a Table with Private Key and Foreign Key:
 
-event_id (integer)
-event_name (varchar, maximum length 100)
-date (date)
-location (varchar, maximum length 100)
-Insert some sample data into the Events table. Once done, truncate the table to remove all records while keeping the table structure intact.
+Create a table named Patients with the following columns:
+PatientID as a private key (representing a unique identifier for each patient)
+Other relevant columns like Name, Age, Gender, etc.
+Add a foreign key constraint referencing the Psychologists table (Assume a column PsychologistID exists in the Patients table and references the PsychologistID column in the Psychologists table).
+Drop Both Keys:
 
-Renaming Tables:
-Create a table named Restaurants with columns:
+Write SQL commands to drop the primary key constraint and the foreign key constraint from the Patients table.
+Add Primary Key:
 
-restaurant_id (integer)
-name (varchar, maximum length 50)
-cuisine (varchar, maximum length 50)
-location (varchar, maximum length 100)
-Rename the table to DiningSpots.
+Alter the Patients table to add a new primary key constraint on the PatientID column.
+Add Composite Primary Key:
+
+Create a composite primary key on the PatientID and AppointmentDate columns to uniquely identify appointments (considering the need for appointment scheduling in the future).
+Drop Foreign Key:
+
+Remove the foreign key constraint from the Patients table that references the Psychologists table.
+Add Foreign Key:
+
+Add a new foreign key constraint on the Patients table, referencing the Psychologists table.
+
